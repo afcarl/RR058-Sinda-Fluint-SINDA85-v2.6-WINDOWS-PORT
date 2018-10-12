@@ -1,0 +1,145 @@
+1
+
+
+                                          N A S A / M A R T I N   M A R I E T T A  
+                        S Y S T E M S   I M P R O V E D   N U M E R I C A L   D I F F E R E N C I N G
+                                         T H E R M A L   A N A L Y Z E R   1 9 8 5
+                                         W I T H   F L U I D   I N T E G R A T O R
+
+
+         SSSSSSSSS 
+        SSSSSSSSSSS
+        SSS      SS
+        SSS        
+         SSSSSSSSS 
+                SSS    IIIIIIIIIII
+        SS      SSS    IIIIIIIIIII
+        SSSSSSSSSSS        III    
+         SSSSSSSSS         III    
+                           III    
+                           III        NNN     NNN
+                           III        NNNN    NNN
+                       IIIIIIIIIII    NNNNN   NNN
+                       IIIIIIIIIII    NNNNNN  NNN
+                                      NNN NNN NNN
+                                      NNN  NNNNNN    DDDDDDDDD  
+                                      NNN   NNNNN    DDDDDDDDDD 
+                                      NNN    NNNN    DDD     DDD
+                                      NNN     NNN    DDD     DDD
+                                                     DDD     DDD
+                                                     DDD     DDD      AAAAAAA  
+                                                     DDD     DDD     AAAAAAAAA 
+                                                     DDDDDDDDDD     AAA     AAA
+                                                     DDDDDDDDD      AAA     AAA
+                                                                    AAAAAAAAAAA
+                                                                    AAA     AAA
+                                                                    AAA     AAA         ##
+                                                                    AAA     AAA         ##
+            W I T H    S P E C I A L   G U E S T   S T A R          AAA     AAA         #     8888888  
+                                                                                             888888888  
+            FFFFFFF  LL      UU    UU  IIIIII  NN   NN  TTTTTTT                             888     888
+           FF       LL      UU    UU    II    NNN  NN     TT                                888     888
+          FFFFF    LL      UU    UU    II    NN N NN     TT                                  888888888 
+         FF       LL      UU    UU    II    NN  NNN     TT                                  888     888    55555555555
+        FF       LLLLLLL   UUUUUU  IIIIII  NN   NN     TT                                   888     888    55555555555
+                                                                                            88888888888    555        
+                                                                                             888888888     555        
+        P R E - P R O C E S S O R  E X E C U T I O N                                                       5555555555  
+        VERSION.MODIFICATION ... PP2.6                                                                             555
+        MODIFICATION DATE ...... 100193                                                                            555
+                                                                                                           55555555555
+                                                                                                           5555555555 
+
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     1
+
+ MODEL = SINDA85                                                                             
+ OPTIONS DATA BLOCK                                                
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER OPTIONS DATA                                                                  ROOT    
+   INPUT           TITLE HEATED BAR SAMPLE PROBLEM                                                      ROOT    
+   INPUT                   OUTPUT = BAR.OUT                                                             ROOT    
+   INPUT                   MODEL = TEST                                                                 ROOT    
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     2
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+ MODEL NAME CHECK                                                  
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+
+  LIST OF HEADER CARDS IN NODE DATA - CHECKING MODEL NAMES AGAINST BUILD CARDS
+
+HEADER NODE DATA, SUB1
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     3
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+ CONSTANTS DATA BLOCK                                              
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER CONTROL DATA, GLOBAL                                                          GLOBAL  
+   INPUT                   TIMEND = 1000.0, OUTPUT = 1.0                                                GLOBAL  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     4
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+ NODE DATA BLOCK                                                   
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER NODE DATA, SUB1                                                               SUB1    
+   INPUT                   10, 70.0, 0.006                                                              SUB1    
+   INPUT                   15, 70.0, 0.006                                                              SUB1    
+   INPUT                   20, 70.0, 0.006                                                              SUB1    
+   INPUT                   -99, -460., 0.0                                                              SUB1    
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     5
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+ CONDUCTOR DATA BLOCK                                              
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER CONDUCTOR DATA, SUB1                                                          SUB1    
+   INPUT                   1015, 10, 15, 0.00417                                                        SUB1    
+   INPUT                   1520, 15, 20, 0.00417                                                        SUB1    
+   INPUT                   -2099, 20, 99, 1.98E-15                                                      SUB1    
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     6
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+ SOURCE DATA BLOCK                                                 
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER SOURCE DATA, SUB1                                                             SUB1    
+   INPUT                   10, 10.0*3.413/60.0                                                          SUB1    
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     7
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+ OPERATIONS DATA BLOCK                                             
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER OPERATION DATA                                                                GLOBAL  
+   INPUT           BUILD TEST, SUB1                                                                     GLOBAL  
+   INPUT                   CALL FWDBCK                                                                  GLOBAL  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     8
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+ OUTPUT DATA BLOCK                                                 
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER OUTPUT CALLS, SUB1                                                            SUB1    
+   INPUT                   IF(T15  .GE.  200.0) THEN                                                    SUB1    
+   INPUT                           CALL TPRINT('SUB1')                                                  SUB1    
+   INPUT                           TIMEND = TIMEN                                                       SUB1    
+   INPUT                   ENDIF                                                                        SUB1    

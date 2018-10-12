@@ -1,0 +1,140 @@
+
+!#########################################################################################################################
+
+! Filenames
+
+	  common /file_names / s_NRSI_pre,s_NRSO_pre,s_NIN_pre,s_NOUTa_pre,
+     &  s_NOUTb_pre,
+     &  s_NOPT_pre,s_NNODEa_pre,s_NNODEb_pre,s_NCONDa_pre,s_NCONDb_pre,
+     &  s_NARY_pre,s_NCARY_pre,
+     &  s_NUSER_pre,s_NCONT_pre,s_NOPER_pre,s_NOUTP_pre,s_NVAR0_pre,
+     &  s_NVAR1_pre,s_NVAR2_pre,s_NTARY_pre,s_NSORC_pre,s_NDATA_pre,
+     &  s_NGDATA_pre,s_NVCD_pre,s_NVGD_pre,s_NPCSD_pre,s_NSVS_pre,
+     &  s_NTSV_pre,s_NNDMP_pre,s_NQMAP_pre,s_NUSER1a_pre,s_NUSER1b_pre,
+     &  s_NUSER2a_pre,s_NUSER2b_pre,
+     &  s_NSUBR_pre,s_NOCNTR_pre,s_NOUSEa_pre,s_NOUSEb_pre,s_NONODE_pre,
+     &  s_NOUSER_pre,
+     &  s_NFLOWa_pre,s_NFLOWb_pre,s_NFLOWc_pre,s_NFLOWd_pre,s_NFLOWe_pre,
+     &  s_NFLOWf_pre,s_NFLOWg_pre,s_NFLOWh_pre,s_NFLOWi_pre,s_NFLOW2_pre,
+     &  s_NSAVE_pre,s_NOARRY_pre,s_NOTARY_pre,
+     &  s_NOCARY_pre,s_NOSORC_pre,s_NFORT_pre,s_NSCR1a_pre,s_NSCR1b_pre,
+     &  s_NSCR1c_pre,s_NSCR1d_pre,s_NSCR1e_pre,s_NSCR1f_pre,s_NSCR2a_pre,
+     &  s_NSCR2b_pre,s_NSCR2c_pre,s_NSCR2d_pre,s_NSCR2e_pre,
+     &  s_NSCR3a_pre,s_NSCR3b_pre,s_NSCR3c_pre,s_NSCR3d_pre,s_NSCR3e_pre,
+     &  s_NSCR3f_pre,s_NSCR3g_pre,s_NSCR3h_pre,s_NSCR3i_pre,s_NSCR3j_pre,
+     &  s_NSCR3k_pre,s_NSCR3l_pre,s_NSCR3m_pre,s_NSCR3n_pre,s_NSCR4a_pre,
+     &  s_NSCR4b_pre,s_NSCR4c_pre,s_NSCR4d_pre,
+     &  s_NFLOW1_pre,s_NFLOW3_pre,s_NFLOW4_pre,s_NFLOW5_pre,s_NFLOG0_pre,
+     &  s_NFLOG1_pre,s_NFLOG2_pre,s_NFLOW6_pre,s_NFLOW7_pre,s_NFPRPP_pre,
+     &  s_NFPROP_pre,s_NFORTP_pre,s_NETQF_pre,s_NOOPT_pre,s_NPARAM_pre,
+
+     &  s_NRSI_fn,s_NRSO_fn,s_NIN_fn,s_NOUTa_fn,
+     &  s_NOUTb_fn,
+     &  s_NOPT_fn,s_NNODEa_fn,s_NNODEb_fn,s_NCONDa_fn,s_NCONDb_fn,
+     &  s_NARY_fn,s_NCARY_fn,
+     &  s_NUSER_fn,s_NCONT_fn,s_NOPER_fn,s_NOUTP_fn,s_NVAR0_fn,
+     &  s_NVAR1_fn,s_NVAR2_fn,s_NTARY_fn,s_NSORC_fn,s_NDATA_fn,
+     &  s_NGDATA_fn,s_NVCD_fn,s_NVGD_fn,s_NPCSD_fn,s_NSVS_fn,
+     &  s_NTSV_fn,s_NNDMP_fn,s_NQMAP_fn,s_NUSER1a_fn,s_NUSER1b_fn,
+     &  s_NUSER2a_fn,s_NUSER2b_fn,
+     &  s_NSUBR_fn,s_NOCNTR_fn,s_NOUSEa_fn,s_NOUSEb_fn,s_NONODE_fn,
+     &  s_NOUSER_fn,
+     &  s_NFLOWa_fn,s_NFLOWb_fn,s_NFLOWc_fn,s_NFLOWd_fn,s_NFLOWe_fn,
+     &  s_NFLOWf_fn,s_NFLOWg_fn,s_NFLOWh_fn,s_NFLOWi_fn,s_NFLOW2_fn,
+     &  s_NSAVE_fn,s_NOARRY_fn,s_NOTARY_fn,
+     &  s_NOCARY_fn,s_NOSORC_fn,s_NFORT_fn,s_NSCR1a_fn,s_NSCR1b_fn,
+     &  s_NSCR1c_fn,s_NSCR1d_fn,s_NSCR1e_fn,s_NSCR1f_fn,s_NSCR2a_fn,
+     &  s_NSCR2b_fn,s_NSCR2c_fn,s_NSCR2d_fn,s_NSCR2e_fn,
+     &  s_NSCR3a_fn,s_NSCR3b_fn,s_NSCR3c_fn,s_NSCR3d_fn,s_NSCR3e_fn,
+     &  s_NSCR3f_fn,s_NSCR3g_fn,s_NSCR3h_fn,s_NSCR3i_fn,s_NSCR3j_fn,
+     &  s_NSCR3k_fn,s_NSCR3l_fn,s_NSCR3m_fn,s_NSCR3n_fn,s_NSCR4a_fn,
+     &  s_NSCR4b_fn,s_NSCR4c_fn,s_NSCR4d_fn,
+     &  s_NFLOW1_fn,s_NFLOW3_fn,s_NFLOW4_fn,s_NFLOW5_fn,s_NFLOG0_fn,
+     &  s_NFLOG1_fn,s_NFLOG2_fn,s_NFLOW6_fn,s_NFLOW7_fn,s_NFPRPP_fn,
+     &  s_NFPROP_fn,s_NFORTP_fn,s_NETQF_fn,s_NOOPT_fn,s_NPARAM_fn
+
+
+
+	  character(120) s_NRSI_pre,s_NRSO_pre,s_NIN_pre,s_NOUTa_pre,
+     &  s_NOUTb_pre,
+     &  s_NOPT_pre,s_NNODEa_pre,s_NNODEb_pre,s_NCONDa_pre,s_NCONDb_pre,
+     &  s_NARY_pre,s_NCARY_pre,
+     &  s_NUSER_pre,s_NCONT_pre,s_NOPER_pre,s_NOUTP_pre,s_NVAR0_pre,
+     &  s_NVAR1_pre,s_NVAR2_pre,s_NTARY_pre,s_NSORC_pre,s_NDATA_pre,
+     &  s_NGDATA_pre,s_NVCD_pre,s_NVGD_pre,s_NPCSD_pre,s_NSVS_pre,
+     &  s_NTSV_pre,s_NNDMP_pre,s_NQMAP_pre,s_NUSER1a_pre,s_NUSER1b_pre,
+     &  s_NUSER2a_pre,s_NUSER2b_pre,
+     &  s_NSUBR_pre,s_NOCNTR_pre,s_NOUSEa_pre,s_NOUSEb_pre,s_NONODE_pre,
+     &  s_NOUSER_pre,
+     &  s_NFLOWa_pre,s_NFLOWb_pre,s_NFLOWc_pre,s_NFLOWd_pre,s_NFLOWe_pre,
+     &  s_NFLOWf_pre,s_NFLOWg_pre,s_NFLOWh_pre,s_NFLOWi_pre,s_NFLOW2_pre,
+     &  s_NSAVE_pre,s_NOARRY_pre,s_NOTARY_pre,
+     &  s_NOCARY_pre,s_NOSORC_pre,s_NFORT_pre,s_NSCR1a_pre,s_NSCR1b_pre,
+     &  s_NSCR1c_pre,s_NSCR1d_pre,s_NSCR1e_pre,s_NSCR1f_pre,s_NSCR2a_pre,
+     &  s_NSCR2b_pre,s_NSCR2c_pre,s_NSCR2d_pre,s_NSCR2e_pre,
+     &  s_NSCR3a_pre,s_NSCR3b_pre,s_NSCR3c_pre,s_NSCR3d_pre,s_NSCR3e_pre,
+     &  s_NSCR3f_pre,s_NSCR3g_pre,s_NSCR3h_pre,s_NSCR3i_pre,s_NSCR3j_pre,
+     &  s_NSCR3k_pre,s_NSCR3l_pre,s_NSCR3m_pre,s_NSCR3n_pre,s_NSCR4a_pre,
+     &  s_NSCR4b_pre,s_NSCR4c_pre,s_NSCR4d_pre,
+     &  s_NFLOW1_pre,s_NFLOW3_pre,s_NFLOW4_pre,s_NFLOW5_pre,s_NFLOG0_pre,
+     &  s_NFLOG1_pre,s_NFLOG2_pre,s_NFLOW6_pre,s_NFLOW7_pre,s_NFPRPP_pre,
+     &  s_NFPROP_pre,s_NFORTP_pre,s_NETQF_pre,s_NOOPT_pre,s_NPARAM_pre,
+
+     &  s_NRSI_fn,s_NRSO_fn,s_NIN_fn,s_NOUTa_fn,
+     &  s_NOUTb_fn,
+     &  s_NOPT_fn,s_NNODEa_fn,s_NNODEb_fn,s_NCONDa_fn,s_NCONDb_fn,
+     &  s_NARY_fn,s_NCARY_fn,
+     &  s_NUSER_fn,s_NCONT_fn,s_NOPER_fn,s_NOUTP_fn,s_NVAR0_fn,
+     &  s_NVAR1_fn,s_NVAR2_fn,s_NTARY_fn,s_NSORC_fn,s_NDATA_fn,
+     &  s_NGDATA_fn,s_NVCD_fn,s_NVGD_fn,s_NPCSD_fn,s_NSVS_fn,
+     &  s_NTSV_fn,s_NNDMP_fn,s_NQMAP_fn,s_NUSER1a_fn,s_NUSER1b_fn,
+     &  s_NUSER2a_fn,s_NUSER2b_fn,
+     &  s_NSUBR_fn,s_NOCNTR_fn,s_NOUSEa_fn,s_NOUSEb_fn,s_NONODE_fn,
+     &  s_NOUSER_fn,
+     &  s_NFLOWa_fn,s_NFLOWb_fn,s_NFLOWc_fn,s_NFLOWd_fn,s_NFLOWe_fn,
+     &  s_NFLOWf_fn,s_NFLOWg_fn,s_NFLOWh_fn,s_NFLOWi_fn,s_NFLOW2_fn,
+     &  s_NSAVE_fn,s_NOARRY_fn,s_NOTARY_fn,
+     &  s_NOCARY_fn,s_NOSORC_fn,s_NFORT_fn,s_NSCR1a_fn,s_NSCR1b_fn,
+     &  s_NSCR1c_fn,s_NSCR1d_fn,s_NSCR1e_fn,s_NSCR1f_fn,s_NSCR2a_fn,
+     &  s_NSCR2b_fn,s_NSCR2c_fn,s_NSCR2d_fn,s_NSCR2e_fn,
+     &  s_NSCR3a_fn,s_NSCR3b_fn,s_NSCR3c_fn,s_NSCR3d_fn,s_NSCR3e_fn,
+     &  s_NSCR3f_fn,s_NSCR3g_fn,s_NSCR3h_fn,s_NSCR3i_fn,s_NSCR3j_fn,
+     &  s_NSCR3k_fn,s_NSCR3l_fn,s_NSCR3m_fn,s_NSCR3n_fn,s_NSCR4a_fn,
+     &  s_NSCR4b_fn,s_NSCR4c_fn,s_NSCR4d_fn,
+     &  s_NFLOW1_fn,s_NFLOW3_fn,s_NFLOW4_fn,s_NFLOW5_fn,s_NFLOG0_fn,
+     &  s_NFLOG1_fn,s_NFLOG2_fn,s_NFLOW6_fn,s_NFLOW7_fn,s_NFPRPP_fn,
+     &  s_NFPROP_fn,s_NFORTP_fn,s_NETQF_fn,s_NOOPT_fn,s_NPARAM_fn
+
+
+!#########################################################################################################################
+
+! File Unit Numbers
+
+!	common /file_units / NRSI,NRSO,NIN,NOUT,NOPT,NNODE,NCOND,NARY,
+!     & NCARY,NUSER,NCONT,NOPER,NOUTP,NVAR0,NVAR1,NVAR2,NTARY,NSORC,
+!     & NDATA,NGDATA,NVCD,NVGD,NPCSD,NSVS,NTSV,NNDMP,NQMAP,NUSER1,NUSER2,
+!     & NSUBR,NOCNTR,NOUSE,NONODE,NOUSER,NFLOW,NFLOW2,NSAVE,NOARRY,NOTARY,
+!     & NOCARY,NOSORC,NFORT,NSCR1,NSCR2,NSCR3,NSCR4,NFLOW1,NFLOW3,NFLOW4,
+!     & NFLOW5,NFLOG0,NFLOG1,NFLOG2,NFLOW6,NFLOW7,NFPRPP,NFPROP,NFORTP
+
+!	integer*4	NRSI,NRSO,NIN,NOUT,NOPT,NNODE,NCOND,NARY,
+!     & NCARY,NUSER,NCONT,NOPER,NOUTP,NVAR0,NVAR1,NVAR2,NTARY,NSORC,
+!     & NDATA,NGDATA,NVCD,NVGD,NPCSD,NSVS,NTSV,NNDMP,NQMAP,NUSER1,NUSER2,
+!     & NSUBR,NOCNTR,NOUSE,NONODE,NOUSER,NFLOW,NFLOW2,NSAVE,NOARRY,NOTARY,
+!     & NOCARY,NOSORC,NFORT,NSCR1,NSCR2,NSCR3,NSCR4,NFLOW1,NFLOW3,NFLOW4,
+!     & NFLOW5,NFLOG0,NFLOG1,NFLOG2,NFLOW6,NFLOW7,NFPRPP,NFPROP,NFORTP
+
+!#########################################################################################################################
+
+	common /misc_integers/ iconsoleout
+
+	integer*4	iconsoleout
+
+!#########################################################################################################################
+
+	common /misc_strings/ projectpath1
+
+	character(120)	projectpath1
+
+!#########################################################################################################################
+

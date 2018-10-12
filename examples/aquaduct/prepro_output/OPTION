@@ -1,0 +1,6 @@
+HEADER OPTIONS DATA
+TITLE FLUINT SAMPLE PROBLEM 2 - SIPHON IN A ROMAN AQUADUCT
+	OUTPUT	= aquaduct.out
+	USER1	= snowmelt.out
+	USER2   = earthquake.out
+C

@@ -1,0 +1,21 @@
+The FPROPxxxx.DAT files were done by Martin Marietta Corporation and
+the FLUIDxxxx.DAT files were created by John Keller of Lockheed
+Engineering and Sciences Company.  
+
+The F6717.INC and F6717.ENG were written by MMC for use in version 2.5.
+They are accurate within a certain range, and are advertised to be 60%
+faster than the library fluids.
+
+The F****_PT.INC were also written by MMC for version 2.5.  They are
+correct for a wider range of fluids and are advertised to be 50% faster
+than library solutions.  Some of the fluids defined here, O2, H2, and others
+do not have library descriptions. These routines have pressure and 
+temperature depentdent properties which are very accurate around the 
+critical point.  These routines have much more data, abd therefore the
+compilation stage of the run is longer than usual.
+
+Of course, no one takes responsibility for the correctness of the files.
+Keep in mind that they are tabular data and not full equations.  Some error
+will exist.
+
+Use at your own risks.

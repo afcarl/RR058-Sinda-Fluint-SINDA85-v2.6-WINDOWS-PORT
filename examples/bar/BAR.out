@@ -1,0 +1,112 @@
+1
+
+
+                                          N A S A / M A R T I N   M A R I E T T A  
+                        S Y S T E M S   I M P R O V E D   N U M E R I C A L   D I F F E R E N C I N G
+                                         T H E R M A L   A N A L Y Z E R   1 9 8 5
+                                         W I T H   F L U I D   I N T E G R A T O R
+
+
+         SSSSSSSSS 
+        SSSSSSSSSSS
+        SSS      SS
+        SSS        
+         SSSSSSSSS 
+                SSS    IIIIIIIIIII
+        SS      SSS    IIIIIIIIIII
+        SSSSSSSSSSS        III    
+         SSSSSSSSS         III    
+                           III    
+                           III        NNN     NNN
+                           III        NNNN    NNN
+                       IIIIIIIIIII    NNNNN   NNN
+                       IIIIIIIIIII    NNNNNN  NNN
+                                      NNN NNN NNN
+                                      NNN  NNNNNN    DDDDDDDDD  
+                                      NNN   NNNNN    DDDDDDDDDD 
+                                      NNN    NNNN    DDD     DDD
+                                      NNN     NNN    DDD     DDD
+                                                     DDD     DDD
+                                                     DDD     DDD      AAAAAAA  
+                                                     DDD     DDD     AAAAAAAAA 
+                                                     DDDDDDDDDD     AAA     AAA
+                                                     DDDDDDDDD      AAA     AAA
+                                                                    AAAAAAAAAAA
+                                                                    AAA     AAA
+                                                                    AAA     AAA         ##
+                                                                    AAA     AAA         ##
+            W I T H    S P E C I A L   G U E S T   S T A R          AAA     AAA         #     8888888  
+                                                                                             888888888  
+            FFFFFFF  LL      UU    UU  IIIIII  NN   NN  TTTTTTT                             888     888
+           FF       LL      UU    UU    II    NNN  NN     TT                                888     888
+          FFFFF    LL      UU    UU    II    NN N NN     TT                                  888888888 
+         FF       LL      UU    UU    II    NN  NNN     TT                                  888     888    55555555555
+        FF       LLLLLLL   UUUUUU  IIIIII  NN   NN     TT                                   888     888    55555555555
+                                                                                            88888888888    555        
+                                                                                             888888888     555        
+        P R O C E S S O R  E X E C U T I O N                                                               5555555555  
+        VERSION.MODIFICATION ... P2.6                                                                              555
+        MODIFICATION DATE ...... 100193                                                                            555
+                                                                                                           55555555555
+                                                                                                           5555555555 
+
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER '85 (SINDA '85)               PAGE     1
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+                                                                   
+
+
+  BUILDING MODEL TEST     WITH SUBMODEL(S) - 
+          SUB1    , 
+
+  SUBMODEL NAME = SUB1    
+
+
+   ARLXCA =  1.000000E-02 ARLXCC =   0.00000        ATMPCA =  1.000000E+30    ATMPCC =   0.00000        BACKUP =   0.00000    
+   CSGFAC =   0.00000     CSGMAX =   0.00000        CSGMIN =   0.00000        DRLXCA =  1.000000E-02    DRLXCC =   0.00000    
+   DTIMEH =  1.000000E+30 DTIMEI =   0.00000        DTIMEL =   0.00000        DTIMEU =   0.00000        DTMPCA =  1.000000E+30
+   DTMPCC =   0.00000     EBALNA =   0.00000        EBALNC =   0.00000        EBALSA =  1.000000E-02    EBALSC =   0.00000    
+   ESUMIS =   0.00000     ESUMOS =   0.00000        EXTLIM =   50.0000        ITHOLD =         10       NARLXN =          0
+   NATMPN =          0    NCGMAN =          0       NCSGMN =          0       NDRLXN =          0       NDTMPN =          0
+   NEBALN =          0    NLOOPT =        100       ITEROT =          0       ITERXT =          3       OPEITR =          0
+   OUTPUT =   1.00000    
+
+  GLOBAL CONTROL CONSTANTS
+
+
+   ABSZRO =  -459.670     SIGMA  =   1.00000        TIMEM  =   0.00000        TIMEN  =   0.00000        TIMEND =   1000.00    
+   TIMEO  =   0.00000    
+  *** WARNING *** INACCURATE WITH CURRENT TIME STEP: LOWER DTIMEH OR RAISE DRLXCA
+  MODEL: SUB1     DIFF NODE        15
+
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER '85 (SINDA '85)               PAGE     2
+
+ MODEL = TEST                                   HEATED BAR SAMPLE PROBLEM                    
+   FWDBCK                                                          
+
+
+  SUBMODEL NAME = SUB1    
+
+
+                                       CALCULATED                               ALLOWED
+         MAX DIFF DELTA T PER ITER     DRLXCC(SUB1        20)=  0.00000     VS. DRLXCA= 1.000000E-02
+         MAX ARITH DELTA T PER ITER    ARLXCC(             0)=  0.00000     VS. ARLXCA= 1.000000E-02
+         MAX DIFF DEL T PER TIME STEP  DTMPCC(SUB1        10)=  16.6525     VS. DTMPCA= 1.000000E+30
+         MAX ARITH DEL T PER TIME STEP ATMPCC(             0)=  0.00000     VS. ATMPCA= 1.000000E+30
+         MIN STABILITY CRITERIA        CSGMIN(SUB1        15)= 0.719424    
+         MAX STABILITY CRITERIA        CSGMAX(SUB1        10)=  1.43885    
+         NUMBER OF ITERATIONS          LOOPCT                =       5      VS. NLOOPT=     100
+         PROBLEM TIME                  TIMEN                 =  5.00000     VS. TIMEND=  1000.00    
+         MEAN PROBLEM TIME             TIMEM                 =  4.75000    
+         AVERAGE TIME STEP USED SINCE LAST OUTPUT            = 0.500000     VS. DTIMEI=  0.00000    
+
+                                     DIFFUSION NODES IN INPUT NODE NUMBER ORDER
+   T    10=  301.72     T    15=  212.80     T    20=  169.33    
+                                     ARITHMETIC NODES IN INPUT NODE NUMBER ORDER
+                                                        ++NONE++
+                                     HEATER NODES IN INPUT NODE NUMBER ORDER
+                                                        ++NONE++
+                                     BOUNDARY NODES IN INPUT NODE NUMBER ORDER
+   T    99= -460.00    

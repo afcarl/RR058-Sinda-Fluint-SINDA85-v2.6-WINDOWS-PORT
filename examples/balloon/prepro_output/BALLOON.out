@@ -1,0 +1,234 @@
+1
+
+
+                                          N A S A / M A R T I N   M A R I E T T A  
+                        S Y S T E M S   I M P R O V E D   N U M E R I C A L   D I F F E R E N C I N G
+                                         T H E R M A L   A N A L Y Z E R   1 9 8 5
+                                         W I T H   F L U I D   I N T E G R A T O R
+
+
+         SSSSSSSSS 
+        SSSSSSSSSSS
+        SSS      SS
+        SSS        
+         SSSSSSSSS 
+                SSS    IIIIIIIIIII
+        SS      SSS    IIIIIIIIIII
+        SSSSSSSSSSS        III    
+         SSSSSSSSS         III    
+                           III    
+                           III        NNN     NNN
+                           III        NNNN    NNN
+                       IIIIIIIIIII    NNNNN   NNN
+                       IIIIIIIIIII    NNNNNN  NNN
+                                      NNN NNN NNN
+                                      NNN  NNNNNN    DDDDDDDDD  
+                                      NNN   NNNNN    DDDDDDDDDD 
+                                      NNN    NNNN    DDD     DDD
+                                      NNN     NNN    DDD     DDD
+                                                     DDD     DDD
+                                                     DDD     DDD      AAAAAAA  
+                                                     DDD     DDD     AAAAAAAAA 
+                                                     DDDDDDDDDD     AAA     AAA
+                                                     DDDDDDDDD      AAA     AAA
+                                                                    AAAAAAAAAAA
+                                                                    AAA     AAA
+                                                                    AAA     AAA         ##
+                                                                    AAA     AAA         ##
+            W I T H    S P E C I A L   G U E S T   S T A R          AAA     AAA         #     8888888  
+                                                                                             888888888  
+            FFFFFFF  LL      UU    UU  IIIIII  NN   NN  TTTTTTT                             888     888
+           FF       LL      UU    UU    II    NNN  NN     TT                                888     888
+          FFFFF    LL      UU    UU    II    NN N NN     TT                                  888888888 
+         FF       LL      UU    UU    II    NN  NNN     TT                                  888     888    55555555555
+        FF       LLLLLLL   UUUUUU  IIIIII  NN   NN     TT                                   888     888    55555555555
+                                                                                            88888888888    555        
+                                                                                             888888888     555        
+        P R E - P R O C E S S O R  E X E C U T I O N                                                       5555555555  
+        VERSION.MODIFICATION ... PP2.6                                                                             555
+        MODIFICATION DATE ...... 100193                                                                            555
+                                                                                                           55555555555
+                                                                                                           5555555555 
+
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     1
+
+ MODEL = SINDA85                                                                             
+ OPTIONS DATA BLOCK                                                
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER OPTIONS DATA                                                                  ROOT    
+   INPUT           TITLE FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS                                 ROOT    
+   INPUT                   MODEL = BALLOON                                                              ROOT    
+   INPUT                   USER1 = BALLOON.USR                                                          BALLOON 
+   INPUT                   OUTPUT = BALLOON.OUT                                                         BALLOON 
+   INPUT           C                                                                                    BALLOON 
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     2
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ MODEL NAME CHECK                                                  
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+
+  LIST OF HEADER CARDS IN FLOW DATA - CHECKING MODEL NAMES AGAINST BUILDF CARDS
+
+HEADER FLOW DATA,FILLIT,FID=8000			$ SUBMODEL DEFINITION
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     3
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ CONSTANTS DATA BLOCK                                              
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER CONTROL DATA, GLOBAL                                                          GLOBAL  
+   INPUT                   UID = ENG                                                                    GLOBAL  
+   INPUT                   ABSZRO = -460.0                                                              GLOBAL  
+   INPUT                   PATMOS = -14.7                                                               GLOBAL  
+   INPUT                   OUTPTF = 0.1                                                                 GLOBAL  
+   INPUT           C                                                                                    GLOBAL  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     4
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ USER DATA BLOCK                                                   
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER USER DATA, GLOBAL                                                             GLOBAL  
+   INPUT                   TOTMAS = 0.0                                    $ TOTAL MASS IN SYSTEM       GLOBAL  
+   INPUT           C                                                                                    GLOBAL  
+   INPUT                   CVINIT = 10.0*2.0/1500.0/0.005/0.002424 $ COMP/VOL INIT                      GLOBAL  
+   INPUT           C                                                                                    GLOBAL  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     5
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ FPROP DATA BLOCK                                                  
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER FPROP DATA, 8000, SI, 0.0                                                       GLOBAL
+   INPUT                   RGAS = 8314.34/28.97                                                           GLOBAL
+   INPUT                   CP = 1002.0                                                                    GLOBAL
+   INPUT                   K = 7.4E-3                                                                     GLOBAL
+   INPUT                   V = 5.38E-6                                                                    GLOBAL
+   INPUT           C                                                                                      GLOBAL
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     6
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ FLOW DATA BLOCK                                                   
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER FLOW DATA,FILLIT,FID=8000                        $ SUBMODEL DEFINITION        FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT           C DEFAULT CONDITIONS (THOSE OF SUPPLY TANK)                                          FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT           LUMP DEF, PL=22.0*14.7, TL = -70.0, XL = 1.0                                         FILLIT  
+   INPUT           PATH DEF, FR = 0.0, DH = 0.125/12.0                     $ 1/8" DIA HOSE              FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT           LUMP TANK,1,VOL = 3.0                           $ SUPPLY TANK                        FILLIT  
+   INPUT           PATH CONN,10,1,2, DEV = STUBE                   $ HOSE                               FILLIT  
+   INPUT                   TLEN = 5.0                                      $ 5 FEET LONG                FILLIT  
+   INPUT           LUMP JUNC,2                                             $ TEE TO 3 BALLOONS          FILLIT  
+   INPUT           PATH CONN,20,2,3, DUPI = 3.0                    $ VALVE TO 3 BALLOONS                FILLIT  
+   INPUT                   DEV = LOSS                                                                   FILLIT  
+   INPUT                   FK = 25.0                                       $ K-FACTOR, UNCHOKED         FILLIT  
+   INPUT                   AFTH = 0.002/144.0                      $ THROAT AREA                        FILLIT  
+   INPUT           LUMP TANK,3, VOL = 0.002424                     $ A BALLOON AT 2 INCH DIA            FILLIT  
+   INPUT                   PL = 0.0                                        $ AT ATMOSPHERIC PRESSUR     FILLIT  
+   INPUT                   COMP = 1.0                                      $ FAKE INIT VALUE            FILLIT  
+   INPUT           C                                                                                    FILLIT  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     7
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ FLOGIC DATA BLOCK                                                 
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER FLOGIC1, FILLIT                                                               FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT                   CALL CHOKER('FILLIT',20,1,0.0)                                               FILLIT  
+   INPUT           C                                                                                    FILLIT  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     8
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ FLOGIC DATA BLOCK                                                 
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER FLOGIC2, FILLIT                                                               FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT                   IF(FR20  .LE.  0.0) THEN                                                     FILLIT  
+   INPUT                           OUTPTF = 0.01                                                        FILLIT  
+   INPUT                   ELSE                                                                         FILLIT  
+   INPUT                           OUTPTF = 0.01*DL3/FR20                                               FILLIT  
+   INPUT                   ENDIF                                                                        FILLIT  
+   INPUT                   IF(VOL(3)  .GE.  1.0) TIMEND = TIMEN                                         FILLIT  
+   INPUT           C                                                                                    FILLIT  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE     9
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ FLOGIC DATA BLOCK                                                 
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER FLOGIC0, FILLIT                                                               FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT                   COMP(3) = CVINIT*VOL(3)                                                      FILLIT  
+   INPUT           C                                                                                    FILLIT  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE    10
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ OPERATIONS DATA BLOCK                                             
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER OPERATIONS DATA                                                               GLOBAL  
+   INPUT           BUILDF CONFIG,FILLIT                                                                 GLOBAL  
+   INPUT           C                                                                                    GLOBAL  
+   INPUT           DEFMOD FILLIT                                                                        GLOBAL  
+   INPUT                   TIMEND = 10.0                                                                FILLIT  
+   INPUT                   TOTMAS = VOL1*DL1 + DUPI20*VOL3*DL3                                          FILLIT  
+   INPUT                   WRITE(NUSER1,10) TOTMAS                                                      FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT                   CALL FORWRD                                                                  FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT                   TOTMAS = VOL1*DL1 + DUPI20*VOL3*DL3                                          FILLIT  
+   INPUT                   WRITE(NUSER1,20) TOTMAS,TL1,TL3                                              FILLIT  
+   INPUT           100     CONTINUE                                                                     FILLIT  
+   INPUT           FSTART                                                                               FILLIT  
+   INPUT           10      FORMAT(' THE INITIAL SYSTEM MASS IS:',T40,1PG13.5///                         FILLIT  
+   INPUT                .  '   TIME (SEC)',T25,'P SUPPLY',T45,'FLOWRATE',                               FILLIT  
+   INPUT                .  T65,'P BALLOON',T85,'V BALLOON',T105,'COMPLIANCE'/)                          FILLIT  
+   INPUT           20      FORMAT(//' THE FINAL SYSTEM MASS IS:',T40,1PG13.5/                           FILLIT  
+   INPUT                .  ' THE FINAL SUPPLY TEMPERATURE IS:',T40,G13.5/                               FILLIT  
+   INPUT                .  ' THE FINAL BALLOON TEMPERATURE IS:',T40,G13.5)                              FILLIT  
+   INPUT           FSTOP                                                                                FILLIT  
+   INPUT           C                                                                                    FILLIT  
+1
+                            SYSTEMS IMPROVED NUMERICAL DIFFERENCING ANALYZER'85 (SINDA '85)               PAGE    11
+
+ MODEL = BALLOON                     FLUINT SAMPLE PROBLEM 1 - FILLING AIR BALLOONS          
+ OUTPUT DATA BLOCK                                                 
+
+ CARD ORIGIN       12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8 CURRENT MODEL
+
+   INPUT           HEADER OUTPUT CALLS, FILLIT                                                          FILLIT  
+   INPUT                   CALL LMPTAB('FILLIT')                                                        FILLIT  
+   INPUT                   CALL LMXTAB('FILLIT')                                                        FILLIT  
+   INPUT                   CALL PTHTAB('FILLIT')                                                        FILLIT  
+   INPUT           C                                                                                    FILLIT  
+   INPUT                   WRITE(NUSER1,10) 3600.0*TIMEN,PL(1),FR(20)                                   FILLIT  
+   INPUT                +          ,PL(3),VOL(3),COMP(3)                                                FILLIT  
+   INPUT           F10     FORMAT(1X,6(1PG13.5,7X))                                                     FILLIT  
+   INPUT           C                                                                                    FILLIT  
